@@ -1,6 +1,6 @@
 @import url("https: //maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
 
-#login h3 {
+h3{
     color: white;
     text-align: center;
 }
@@ -27,12 +27,11 @@
     height: 50px;
 }
 
-#login form input[type="email"],
-input[type="password"],
-#login form input[type="text"] {
+#login form input[type="email"], 
+input[type="password"], #login form input[type="text"] {
     background-color: #3b4148;
     border-radius: 0px 3px 3px 0px;
-    color: #fff;
+    color: #fff ;
     margin-bottom: 1em;
     padding: 0 16px;
     width: 230px;

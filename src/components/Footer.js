@@ -1,7 +1,7 @@
 import "../CSS/index.css";
 
-var indicator = document.getElementById("indicator");
-console.log(indicator);
+// var indicator = document.getElementById("indicator");
+// console.log(indicator);
 
 function Footer() {
   return (

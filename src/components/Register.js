@@ -2,6 +2,11 @@ import "../CSS/index.css";
 import "../CSS/register.css";
 import "../CSS/login.css";
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
+import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 
 class User {
   constructor(username, pw) {}
@@ -69,7 +74,9 @@ function Register() {
     <div id="login" style={{ opacity: 1 }}>
       <h3>Register</h3>
       <form className="login-form" onSubmit={handleSubmit}>
-        <span className="fa fa-user"></span>
+        <span>
+          <FontAwesomeIcon icon={faUserAlt}></FontAwesomeIcon>
+        </span>
         <input
           autoFocus
           maxLength="25"
@@ -79,7 +86,9 @@ function Register() {
           value={username}
           required
         />
-        <span className="fa fa-lock"></span>
+        <span>
+          <FontAwesomeIcon icon={faLock}></FontAwesomeIcon>
+        </span>
         <input
           autoComplete="off"
           maxLength="8"
@@ -89,7 +98,9 @@ function Register() {
           value={pw}
           required
         />
-        <span className="fa fa-lock"></span>
+        <span>
+          <FontAwesomeIcon icon={faQuestion}></FontAwesomeIcon>
+        </span>
         <input
           autoComplete="off"
           maxLength="8"

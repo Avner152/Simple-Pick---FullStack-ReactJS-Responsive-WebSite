@@ -1,6 +1,9 @@
 import "../CSS/index.css";
 import "../CSS/login.css";
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
+import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
 
 function waitForElm(selector) {
   return new Promise((resolve) => {
@@ -32,7 +35,7 @@ function LogIn() {
   const handleEmailChange = (event) => {
     let value = event.target.value;
     setEmail(value);
-    console.log(value);
+    // console.log(value);
   };
 
   const handlePasswordChange = (event) => {
@@ -45,9 +48,10 @@ function LogIn() {
     evt.preventDefault();
     console.log("been there done that");
     // alert(`Submitting Email ${email}`);
-    setEmail("");
-    setPassword("");
-
+    if (1) {
+      setEmail("");
+      setPassword("");
+    }
   };
 
   return (
@@ -56,7 +60,9 @@ function LogIn() {
         <h3>Log-In</h3>
         <div>
           <form className="login-form" onSubmit={handleSubmit}>
-            <span className="fa fa-user"></span>
+            <span>
+              <FontAwesomeIcon icon={faUserAlt}></FontAwesomeIcon>
+            </span>
             <input
               value={email}
               autoFocus
@@ -64,9 +70,11 @@ function LogIn() {
               onChange={handleEmailChange}
               placeholder="Email"
               type="email"
-            // required
+              // required
             />
-            <span className="fa fa-lock"></span>
+            <span>
+              <FontAwesomeIcon icon={faLock}></FontAwesomeIcon>
+            </span>
             <input
               autoComplete="off"
               maxLength="8"
@@ -74,7 +82,7 @@ function LogIn() {
               placeholder="Password"
               type="password"
               value={pw}
-            // required
+              // required
             />
             <input type="submit" value="Log in" />
           </form>

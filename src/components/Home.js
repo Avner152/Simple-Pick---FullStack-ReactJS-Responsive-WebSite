@@ -1,5 +1,12 @@
 import "../CSS/index.css";
 import { Button, ButtonGroup } from "react-bootstrap";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 
 var marvel = [
   "https://images.hindustantimes.com/img/2021/11/09/1600x900/spider-man_no_way_home_1636451315678_1636451323010.png",
@@ -20,7 +27,6 @@ var buildings = [
 const clearAll = () => {
   let images_wrapper = document.querySelector(".images_wrapper");
   images_wrapper.style.opacity = 0;
-  images_wrapper.innerHTML = ""
 };
 
 const addBuildings = () => {
